@@ -3,5 +3,5 @@
 {generate} = require './generator'
 process.argv[2..].forEach (project) ->
   console.log project
-  name = project[0].toUpperCase() + project[1..]
+  name = project[0] + project[1..]
   generate name

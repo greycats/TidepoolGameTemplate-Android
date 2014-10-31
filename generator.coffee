@@ -35,19 +35,11 @@ walk = (dir, done) ->
 exports.generate = (project) ->
   options =
     currentDate: today()
-    author: 'Rex Sheng'
+    author: 'Jason Huang'
     project: project[0].toLowerCase() + project[1..]
-    Project: project[0].toUpperCase() + project[1..]
+    Project: project[0].toLowerCase() + project[1..]
   
-  projectName = "TP#{project}"
-  pod = ->
-    projDir = "#{projectName}/Project"
-    console.log "pod install in #{projDir} ..."
-    
-    exec "pod", "install", cwd: projDir, (err, stdout, stderr) ->
-      sys.print stdout
-      sys.print stderr
-      console.log 'done!'
+  projectName = "#{project}"
   
   fs.mkdir projectName, (err) ->
     if err
@@ -67,5 +59,4 @@ exports.generate = (project) ->
               console.log path.dirname(targetFileName)
               console.log err
             next()
-      , pod
    
