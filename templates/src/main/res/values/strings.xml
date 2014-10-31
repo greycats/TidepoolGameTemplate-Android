@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">{{ Project }}</string>
+    <string name="{{ Project }}_display_name">{{ Project }}</string>
+    <string name="{{ Project }}_short_desc">Trains your FOCUS</string>
+    <string name="{{ Project }}_long_desc">Shootout challenges your FOCUS when you accurately shoot the bad guys and save the hostages.</string>
+    <string name="{{ Project }}_instruction_1">"Do it first"</string>
+    <string name="{{ Project }}_instruction_2">"Then do it"</string>
+</resources>
